@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Order List</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <h1>Cashier Page</h1>
+
+        <h2>In Progress</h2>
+
+        <span>Barista: <span id="baristaName"><%=user.local.email %></span></span>
+        
+        <ul class="baristaOrders">
+                <% for(var i=0; i < allOrders.length; i++){%>
+                    <% if(!allOrders[i].complete) { %>
+                        <li> 
+                            <span><%=allOrders[i].customerName %></span>
+                            <span><%=allOrders[i].customerOrder %></span>
+                            <input class="complete" type="checkbox" name="checkBox" value="complete">
+                        </li>
+                    <% } %>
+                <% } %>
+        </ul>
+
+        <h2>Completed</h2>
+
+        <ul class="baristaOrders">
+                <% for(var i=0; i < allOrders.length; i++){%>
+                    <% if(allOrders[i].complete) { %>
+                        <li> 
+                            <ul class="unstyled">
+                                <li>Customer: <%=allOrders[i].customerName %></li>
+                                <li>Order: <%=allOrders[i].customerOrder %></li>
+                                <li>Barista: <%=allOrders[i].completedBy %></li>
+                            </ul>
+                        </li>
+                    <% } %>
+                <% } %>  
+            </ul>
+        
+            <script src="js/speechRecognition.js"></script>
+            <script src="js/script.js"></script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>House Cass Barista App</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <h1>Cashier Page</h1>
+        
+        <form action="/submitOrder" method="post">
+            <label for="customerName">Customer Name: </label>
+            <input id="customerName" type="text" name="customerName">
+            <label for="customerOrder">Customer Order: </label>
+            <textArea id="customerOrder" name="customerOrder"></textArea>
+            <button type="submit">Submit Order</button>
+        </form>
+
+        <a href="/baristaLogin">Barista Account</a>
+    
+      
+        <script src="js/script.js"></script>
+
+    </body>
+</html>
